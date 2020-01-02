@@ -1,0 +1,48 @@
+* {
+   margin: 0;
+}
+
+
+main {
+  width: 360px;
+  background-color: rgba(63, 191, 174, 0.74);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header {
+  text-align: center;
+  color: white;
+  height: 300px;
+}
+
+header img {
+  margin-top: 20px;
+  height: 140px;
+
+}
+
+header h2 {
+  margin: 20px 0;
+}
+
+header p {
+  font-size: 22px;
+}
+
+#content {
+  background-color: DEF8F5;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#buttons img {
+  width: 45px;
+  height: 45px;
+  margin: 0 15px;
+}
