@@ -21,8 +21,8 @@ class audioPlayer {
 
  constructor() {
    this.audio_file = document.getElementById("audio_file");
-   this.title_audio = document.getElementById("titleRadio");
-   this.play_pause_button = document.getElementById("playPause");
+   this.title_audio = document.getElementById("title_radio");
+   this.play_pause_button = document.getElementById("play_pause");
    this.isPlayed;
    this.play_pause_button.addEventListener('click', ()=>{
    this.play_pause();
@@ -32,7 +32,7 @@ class audioPlayer {
    this.play_pause();
 
    this.names_radio = [];
-   this.names_radio[0] = "fox news talk";
+   this.names_radio[0] = "Fox news talk";
    this.names_radio[1] = "ESPN";
    this.names_radio[2] = "Sports USA";
 
