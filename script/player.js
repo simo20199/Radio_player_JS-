@@ -1,4 +1,4 @@
-class player{
+class Player{
 
   constructor() {
     const heightMain = document.getElementById('player');
@@ -13,7 +13,7 @@ class player{
 
 }
 
-onload = new player();
+onload = new Player();
 
 // Class buttons
 
@@ -29,36 +29,43 @@ class audioPlayer {
 
    });
 
-   this.play_pause();
+   //this.play_pause();
+
 
    this.names_radio = [];
-   this.names_radio[0] = "Fox news talk";
+   this.names_radio[0] = "Hit Radio";
    this.names_radio[1] = "ESPN";
    this.names_radio[2] = "Sports USA";
 
 
    this.source_audio = [];
-   this.source_audio[0] = "https://onlineradiobox.com/us/foxnewstalk/?cs=us.foxnewstalk&played=1";
+   this.source_audio[0] = "http://www.maghreb-radio.com/hit-radio-maroc-en-direct";
    this.source_audio[1] = "https://onlineradiobox.com/us/wknr/?cs=us.wknr&played=1";
    this.source_audio[2] = "https://onlineradiobox.com/us/sportsusa/?cs=us.sportsusa&played=1";
    this.server = 0;
 
    this.setResource();
 
-   document.getElementById("next").addEventListener('click', ()=>{
+   document.getElementById("next").addEventListener('click',()=>{
       if(this.server<this.source_audio.length-1){
         ++this.server;
         this.isPlayed = false;
-
+      }else{
+        this.server=0;
       }
+       localStorage.setItem("SAVE-POSITION", this.server);
        this.setResource();
    });
 
-   document.getElementById("back").addEventListener('click', ()=>{
+   document.getElementById("back").addEventListener('click',()=>{
       if(this.server>0){
         --this.server;
       this.isPlayed =false;
+      }else{
+
+        this.server =this.source_audio.length-1;
     }
+      localStorage.setItem("SAVE-POSITION", this.server);
       this.setResource();
 
    });
@@ -66,6 +73,10 @@ class audioPlayer {
  }
 
   setResource() {
+    if(localStorage.getItem("SAVE-POSITION")!=null){
+      this.server=localStorage.getItem("SAVE-POSITION");
+
+    }
 
    this.audio_file.src = this.source_audio[this.server];
    this.title_audio.innerHTML = this.names_radio[this.server];

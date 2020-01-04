@@ -5,7 +5,6 @@
 
 main {
   width: 360px;
-  background-color: rgba(63, 191, 174, 0.74);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -13,8 +12,10 @@ main {
 
 header {
   text-align: center;
-  color: white;
+  color: balck;
   height: 300px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,1));
+
 }
 
 header img {
@@ -25,6 +26,7 @@ header img {
 
 header h2 {
   margin: 20px 0;
+  font-size: 35px;
 }
 
 header p {
@@ -45,4 +47,62 @@ header p {
   width: 45px;
   height: 45px;
   margin: 0 15px;
+}
+
+#volume {
+  text-align: center;
+}
+
+#volume input{
+  width: 100%;
+}
+
+input[type="range" i]{
+  -webkit-appearance:none;
+  background:#d94a4a;
+  height: 4px;
+  margin: 0%;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  background:#6f86d1;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+
+}
+
+h2{
+  margin: 15px 0;
+}
+
+#color {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#color button{
+
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+#color1 {
+  background:linear-gradient(#e66465, #9198e5);
+}
+
+#color2 {
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+
+}
+
+#color3 {
+  background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+}
+
+#color4 {
+    background-image: linear-gradient(to right, black, rgba(255,0,0,1));
+
 }
