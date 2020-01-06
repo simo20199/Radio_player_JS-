@@ -17,7 +17,7 @@ onload = new Player();
 
 // Class buttons
 
-class audioPlayer {
+class audio_player {
 
  constructor() {
    this.audio_file = document.getElementById("audio_file");
@@ -33,15 +33,19 @@ class audioPlayer {
 
 
    this.names_radio = [];
-   this.names_radio[0] = "Hit Radio";
-   this.names_radio[1] = "ESPN";
-   this.names_radio[2] = "Sports USA";
+   this.names_radio[0] = "Virgin Radio";
+   this.names_radio[1] = "bbc Radio London";
+   this.names_radio[2] = "talk sport";
+   this.names_radio[3] = "BOX UK";
+
 
 
    this.source_audio = [];
-   this.source_audio[0] = "./img/m.mp3";
-   this.source_audio[1] = "./img/saad.mp3";
-   this.source_audio[2] = "https://onlineradiobox.com/us/sportsusa/?cs=us.sportsusa&played=1";
+   this.source_audio[0] = "http://radio.virginradio.co.uk/stream";
+   this.source_audio[1] = "http://bbcmedia.ic.llnwd.net/stream/bbcmedia_lrldn_mf_q";
+   this.source_audio[2] = "https://radio.talksport.com/stream";
+   this.source_audio[2] = "http://51.75.170.46:6191/stream/1/";
+
    this.server = 0;
 
    this.setResource();
@@ -89,6 +93,7 @@ class audioPlayer {
       this.play_pause_button.src = "./img/pause.png";
       this.audio_file.play();
       this.isPlayed = true;
+
     }else{
       this.play_pause_button.src = "./img/play.png";
       this.audio_file.pause();
@@ -99,4 +104,4 @@ class audioPlayer {
 }
 
 
-onload = new audioPlayer();
+onload = new audio_player();

@@ -1,4 +1,4 @@
-class Volume{
+class volume{
 
   constructor(){
     this.audio_file = document.getElementById('audio_file');
@@ -21,4 +21,4 @@ class Volume{
 }
 
 
-onload = new Volume();
+onload = new volume();
