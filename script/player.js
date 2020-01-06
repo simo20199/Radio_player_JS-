@@ -44,7 +44,7 @@ class audio_player {
    this.source_audio[0] = "http://radio.virginradio.co.uk/stream";
    this.source_audio[1] = "http://bbcmedia.ic.llnwd.net/stream/bbcmedia_lrldn_mf_q";
    this.source_audio[2] = "https://radio.talksport.com/stream";
-   this.source_audio[2] = "http://51.75.170.46:6191/stream/1/";
+   this.source_audio[3] = "http://51.75.170.46:6191/stream/1/";
 
    this.server = 0;
 
