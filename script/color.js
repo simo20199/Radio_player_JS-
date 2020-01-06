@@ -38,7 +38,7 @@ constructor(){
 
     }
     if(color == "color3"){
-      document.body.style.background ='linear-gradient(0.25turn, #4FEFF4, #ebf8e1, #f69d3c)';
+      document.body.style.background ='linear-gradient(0.25turn, #4FEFF4, #ebf8e1, red)';
 
     }
     if(color == "color4"){
